@@ -1,0 +1,121 @@
+.navbar{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;       /* Fixes the navbar at the top of the page */
+    top: -10px;                /* Positions it at the top */
+    left: 0;               /* Aligns it to the left edge */
+    width: 100%;           /* Spans the entire width of the page */
+    z-index: 1000;         /* Ensures the navbar stays on top of other elements */
+    background-color: white; /* Optional: to give the navbar a solid background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect */
+}
+.navbar .logo{
+    width: 150px;
+}
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+    
+}
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar button{
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid rgb(103, 198, 158);
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover{
+    background-color:rgb(119, 194, 162);
+    color: aliceblue;
+}
+
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+    
+}
+
+.navbar a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #49557e;
+}
+
+
+
+
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar .navbar-right .navbar-search-icon .Dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 50%; 
+    top: -8px;
+    right: -8px;
+};
+
+@media (max-width:1050px){
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar-menu{
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right bottom{
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width:900px){
+    .navbar .logo{
+        width: 120px;
+    }
+    .navbar-menu{
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right{
+        gap: 20px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right bottom{
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:750px){
+    
+    .navbar-menu{
+        display: none;
+    }
+}
+

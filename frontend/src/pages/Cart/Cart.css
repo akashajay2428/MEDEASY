@@ -1,0 +1,217 @@
+/* Main container */
+.cart {
+    width: 80%;
+    margin: 20px auto;
+    margin-top: 80px; /* Adjust this to match the height of your navbar */
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Table structure */
+  .cart-items {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .cart-items-title {
+    display: grid;
+    grid-template-columns: 100px 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+
+  }
+  
+  .cart-items-title p {
+    margin: 0;
+    text-align: center;
+  }
+  
+  .cart-items-title img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  /* Header styling */
+  .cart-items .cart-items-title:first-of-type {
+    font-weight: bold;
+    background-color: #91a4b8;
+    color: white;
+    border-radius: 4px 4px 0 0;
+    padding: 12px 0;
+  }
+  
+  /* Total price styling */
+  .cart-items .cart-items-title p:last-child {
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  /* Remove button styling */
+  .cart-items-title p:nth-last-child(1) {
+    cursor: pointer;
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  
+  .cart-items-title p:nth-last-child(1):hover {
+    color: #c0392b;
+  }
+  
+  hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+
+  /* Style for empty cart message */
+.empty-cart-message {
+    text-align: center;
+    color: #888;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+.cart-bottom{
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: max(12vw,20px);
+}
+
+.cart-total{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.cart-total-details{
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  margin-top: 5px;
+}
+
+.cart-total hr{
+  margin: 10px 0px;
+}
+
+.cart-total button{
+  border: none;
+  color: white;
+  background-color: rgb(105, 163, 138);
+  width: max(15vw,200px);
+  padding: 12px 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Hide table headers on screens smaller than 750px */
+@media (max-width: 750px) {
+  
+    /* Adjust .cart to fit better on small screens */
+    .cart {
+      width: 100%;
+      margin-top: 60px; /* Adjust to match navbar height */
+      padding: 15px;
+    }
+  
+    /* Stack each cart item into a card-like format */
+    .cart-items-title {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      gap: 10px;
+      font-size: 14px;
+    }
+  
+    /* Adjust image size and center it in each cart item */
+    .cart-items-title img {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      border-radius: 4px;
+    }
+  
+    /* Display each piece of info in a separate row with labels */
+    .cart-items-title p {
+      text-align: left;
+      margin: 5px 0;
+      font-weight: normal;
+    }
+  
+    /* Label each attribute for clarity */
+    .cart-items-title p:nth-child(2)::before {
+      content: "Title: ";
+      font-weight: bold;
+    }
+    .cart-items-title p:nth-child(3)::before {
+      content: "Price: ";
+      font-weight: bold;
+    }
+    .cart-items-title p:nth-child(4)::before {
+      content: "Quantity: ";
+      font-weight: bold;
+    }
+    .cart-items-title p:nth-child(5)::before {
+      content: "Total: ";
+      font-weight: bold;
+    }
+    .cart-items-title p:nth-child(6)::before {
+      content: "Remove: ";
+      font-weight: bold;
+      color: #e74c3c;
+    }
+    
+    /* Style for the remove button to stand out */
+    .cart-items-title p:nth-child(6) {
+      cursor: pointer;
+      color: #e74c3c;
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    /* Adjust the cart-bottom layout */
+    .cart-bottom {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Center the checkout button */
+    .cart-total button {
+      width: 100%;
+      max-width: 300px;
+      margin-top: 20px;
+    }
+  
+    /* Cart totals section */
+    .cart-total-details {
+      justify-content: space-between;
+      padding: 5px 0;
+    }
+ 
+  
+  .cart-total button {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+  }
+
+  /* Cart totals section */
+  .cart-total-details {
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+}
+

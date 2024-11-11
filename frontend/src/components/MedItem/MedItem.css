@@ -1,0 +1,101 @@
+.med-item {
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.med-item-img-container {
+    width: 100%;
+    height: 180px; /* Adjust as needed */
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.med-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+    border-radius: 15px 15px 0 0;
+}
+
+.med-item-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.med-item-name-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.med-item-name-rating p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.med-item-desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.med-item-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1a8e5f;
+    margin-top: auto;
+}
+
+.med-item-img-container{
+    position: relative;
+}
+.med-item-img-container .add{
+    width: 35px;
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    border-radius: 50%;
+    border: 1px double black;
+    box-shadow: 01px 03px 10px black;
+    cursor: pointer;
+}
+
+.med-item-img-container .add:hover{
+    background:rgb(119, 194, 162);
+    box-shadow: 1px 3px 8px rgb(119, 194, 162);
+}
+
+.med-item-counter {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 6px 10px; 
+    border-radius: 50px;
+    background-color: white;
+    border: 2px solid black;
+}
+.med-item-counter img{
+    width: 30px;
+}
+
+
+ 
