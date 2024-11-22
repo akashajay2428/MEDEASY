@@ -1,19 +1,20 @@
 import React, { useContext, useState } from 'react'
 import './MedItem.css'
 import { assets } from '../../assets/assets'
-import { StoreContext } from '../../Context/Storecontext';
+import { StoreContext } from '../../Context/StoreContext';
 
-const MedItem = ({ id, name, price, description, image }) => {
+const MedItem = ({ id, name, price, description, image, }) => {
   // const [itemCount, setItemCount] = useState(0);
 
-  const {cartItems,addToCart,removeFromCart}=useContext(StoreContext);
+  const {cartItems,addToCart,removeFromCart,url}=useContext(StoreContext);
 
 
 
   return (
     <div className="med-item">
       <div className="med-item-img-container">
-        <img className="med-item-image" src={image} alt="" />
+      <img className="med-item-image" src={`${url}/images/${image}`} alt="" />
+
         {
           !cartItems[id] ? (
             <img className='add'

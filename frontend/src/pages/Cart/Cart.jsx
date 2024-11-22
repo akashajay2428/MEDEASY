@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import './Cart.css'
-import { StoreContext } from '../../Context/Storecontext'
+import { StoreContext } from '../../Context/StoreContext'
 import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
-  const { cartItems, med_list, removeFromCart,getTotalCartAmount } = useContext(StoreContext)
+  const { cartItems, med_list, removeFromCart,getTotalCartAmount,url } = useContext(StoreContext)
 
   // Check if the cart is empty (all quantities are 0 or no items)
   const isCartEmpty = med_list.every(item => !cartItems[item._id] || cartItems[item._id] === 0)
@@ -33,7 +33,7 @@ const Cart = () => {
           if (cartItems[item._id] > 0) {
             return (
               <div key={item._id} className='cart-items-title'>
-                <img src={item.image} alt={item.name} />
+                <img src={url+'/images/'+item.image} alt={item.name} />
                 <p>{item.name}</p>
                 <p>Rs {item.price}</p>
                 <p>{cartItems[item._id]}</p>

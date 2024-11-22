@@ -1,34 +1,44 @@
-.navbar{
+.navbar {
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;       /* Fixes the navbar at the top of the page */
-    top: -10px;                /* Positions it at the top */
-    left: 0;               /* Aligns it to the left edge */
-    width: 100%;           /* Spans the entire width of the page */
-    z-index: 1000;         /* Ensures the navbar stays on top of other elements */
-    background-color: white; /* Optional: to give the navbar a solid background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect */
+    position: fixed;
+    /* Fixes the navbar at the top of the page */
+    top: -10px;
+    /* Positions it at the top */
+    left: 0;
+    /* Aligns it to the left edge */
+    width: 100%;
+    /* Spans the entire width of the page */
+    z-index: 1000;
+    /* Ensures the navbar stays on top of other elements */
+    background-color: white;
+    /* Optional: to give the navbar a solid background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: adds a shadow effect */
 }
-.navbar .logo{
+
+.navbar .logo {
     width: 150px;
 }
-.navbar-menu{
+
+.navbar-menu {
     display: flex;
     list-style: none;
     gap: 20px;
     color: #49557e;
     font-size: 18px;
-    
+
 }
-.navbar-right{
+
+.navbar-right {
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
-.navbar button{
+.navbar button {
     background: transparent;
     font-size: 16px;
     color: #49557e;
@@ -39,18 +49,18 @@
     transition: 0.3s;
 }
 
-.navbar button:hover{
-    background-color:rgb(119, 194, 162);
+.navbar button:hover {
+    background-color: rgb(119, 194, 162);
     color: aliceblue;
 }
 
-.navbar .active{
+.navbar .active {
     padding-bottom: 2px;
     border-bottom: 2px solid #49557e;
-    
+
 }
 
-.navbar a{
+.navbar a {
     cursor: pointer;
     text-decoration: none;
     color: #49557e;
@@ -67,55 +77,103 @@
     position: absolute;
     min-width: 10px;
     min-height: 10px;
-    background-color: tomato;
-    border-radius: 50%; 
+    background-color: rgb(103, 198, 158);
+    border-radius: 50%;
     top: -8px;
     right: -8px;
-};
+}
 
-@media (max-width:1050px){
-    .navbar .logo{
+;
+
+.navbar-profile {
+    position: relative;
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+    display: flex;
+     flex-direction: column;
+    gap: 10px;
+    background-color: rgb(160, 199, 183);
+   padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid rgb(127, 183, 160) ;
+     outline: 2px solid white;
+    list-style: none;
+}
+
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown img{
+    width: 20px;
+}
+
+.nav-profile-dropdown li:hover{
+    color: white;
+}
+
+
+@media (max-width:1050px) {
+    .navbar .logo {
         width: 140px;
     }
-    .navbar-menu{
+
+    .navbar-menu {
         gap: 20px;
         font-size: 17px;
     }
-    .navbar-right{
+
+    .navbar-right {
         gap: 30px;
     }
-    .navbar-right img{
+
+    .navbar-right img {
         width: 22px;
     }
-    .navbar-right bottom{
+
+    .navbar-right bottom {
         padding: 8px 25px;
     }
 }
 
-@media (max-width:900px){
-    .navbar .logo{
+@media (max-width:900px) {
+    .navbar .logo {
         width: 120px;
     }
-    .navbar-menu{
+
+    .navbar-menu {
         gap: 15px;
         font-size: 16px;
     }
-    .navbar-right{
+
+    .navbar-right {
         gap: 20px;
     }
-    .navbar-right img{
+
+    .navbar-right img {
         width: 20px;
     }
-    .navbar-right bottom{
+
+    .navbar-right bottom {
         padding: 7px 20px;
         font-size: 15px;
     }
 }
 
-@media (max-width:750px){
-    
-    .navbar-menu{
+@media (max-width:750px) {
+
+    .navbar-menu {
         display: none;
     }
 }
-

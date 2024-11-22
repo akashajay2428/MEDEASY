@@ -15,7 +15,7 @@ const addMed=async (req,res)=>{
     })
     try {
         await med.save();
-        res.json({success:true,message:"Med Added"})
+        res.json({success:true,message:"Medicine Successfully Added"})
     } catch (error) {
         console.log(error);
         res.json({success:false,message:"Error"})
